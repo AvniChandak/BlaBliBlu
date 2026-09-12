@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bla Bli Blu: A Love Story - Official Game & Fragrances</title>
+  <meta name="description" content="Play Bla Bli Blu: A Love Story mini-game. Fly on your perfume rocket, dodge creepy tentacles, chase your high score, and unlock exclusive site rewards up to 20% OFF!">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="site-header">
+    <div class="brand">
+      Bla Bli Blu: <span>A Love Story</span>
+    </div>
+    <button class="header-audio-toggle" id="btnAudioToggle" onclick="toggleAudio()">
+      🔊 Sound ON
+    </button>
+  </header>
+
+  <!-- Hero Banner Container (Displays assets/banner.png) -->
+  <section class="hero-banner-wrap">
+    <img 
+      src="assets/banner.png" 
+      alt="Bla Bli Blu: A Love Story Banner" 
+      class="hero-banner-img"
+    >
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="content-container">
+
+    <!-- Story Gallery & Poem Section -->
+    <section class="story-grid-section">
+      <!-- 5 Comic Panels Image Card (assets/comic.png with robust fallbacks) -->
+      <div class="comic-single-card">
+        <img 
+          src="assets/comic.png" 
+          alt="Bla Bli Blu: A Love Story Comic Panels"
+          id="comicStoryImg"
+          onerror="this.src='media__1789239746886.png'; this.onerror=function(){ this.src='file:///C:/Users/chand/.gemini/antigravity-ide/brain/ad5d8346-c7cc-41c5-a336-2d7b3becb6f8/media__1789240335568.png'; this.onerror=function(){ this.src='assets/comic.svg'; }; };"
+        >
+      </div>
+
+      <!-- Poem Column -->
+      <div class="poem-container">
+        <div class="poem-text">
+          <p>Beneath the moon, two hearts entwined,</p>
+          <p>Until the darkness stole one away.</p>
+          <p>Through skies and caves, the journey began,</p>
+          <p>With courage stronger than any plan.</p>
+          <p>Past every danger, through every flight,</p>
+          <p>Love kept shining through the night.</p>
+          <p class="poem-highlight">Will you make it through?</p>
+          <p class="poem-highlight">Fly. Dodge. Rescue.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campaign Tagline Section -->
+    <section class="promo-callout">
+      <h2 class="promo-heading">PLAY. SCORE. SHARE. EARN</h2>
+      <p class="promo-description">
+        Play the game, chase your highest score, and share a screenshot of it on your Instagram Story. 
+        Tag <a href="https://instagram.com/blabliblu.official" target="_blank" class="insta-tag">@blabliblu.official</a> and show us your score to unlock your reward!
+      </p>
+    </section>
+
+    <!-- Scratch Game & Instructions Grid -->
+    <section class="game-section-grid">
+      <!-- Game Container (Scratch Style Embed) -->
+      <div class="scratch-container">
+        <div class="scratch-bar">
+          <div class="scratch-controls">
+            <button class="scratch-btn green-flag" title="Start Game">▶</button>
+            <button class="scratch-btn red-stop" title="Stop Game">🛑</button>
+          </div>
+          <div class="scratch-badge">SCRATCH</div>
+          <div class="scratch-score-badge" id="scratchScore">score: 0</div>
+        </div>
+
+        <div class="game-viewport" style="height: 402px; background: #000000; border-radius: 8px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+          <iframe src="https://scratch.mit.edu/projects/1380101506/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen style="border: none; max-width: 100%; height: 402px;"></iframe>
+        </div>
+      </div>
+
+      <!-- How to Play Instructions Column -->
+      <div class="instructions-column">
+        <div class="instructions-header">
+          <div class="instructions-title-main">Bla Bli Blu: A Love Story</div>
+          <div class="instructions-title-sub">HOW TO PLAY</div>
+        </div>
+
+        <ol class="steps-list">
+          <li>
+            <span class="step-num">1.</span>
+            <span>Click the green flag to start the game.</span>
+          </li>
+          <li>
+            <span class="step-num">2.</span>
+            <span>Press the SPACEBAR to make your character fly upward.</span>
+          </li>
+          <li>
+            <span class="step-num">3.</span>
+            <span>Keep pressing SPACEBAR to stay in the air.</span>
+          </li>
+          <li>
+            <span class="step-num">4.</span>
+            <span>Avoid the tentacles along the way.</span>
+          </li>
+          <li>
+            <span class="step-num">5.</span>
+            <span>Fly as far as you can to achieve a high score.</span>
+          </li>
+          <li>
+            <span class="step-num">6.</span>
+            <span>The higher your score, the better your reward!</span>
+          </li>
+          <li>
+            <span class="step-num">7.</span>
+            <span>Check the Rewards section to see what you can earn.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Rewards Section -->
+    <section class="rewards-section">
+      <table class="rewards-table">
+        <thead>
+          <tr>
+            <th>High Score</th>
+            <th>Rewards on the Bla Bli Blu website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>20-29</td>
+            <td>5% OFF</td>
+          </tr>
+          <tr>
+            <td>30-39</td>
+            <td>10% OFF</td>
+          </tr>
+          <tr>
+            <td>40-49</td>
+            <td>15% OFF</td>
+          </tr>
+          <tr>
+            <td>50+</td>
+            <td>20% OFF</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Products Collection Showcase (Matching Screenshots 1, 2, 3) -->
+    <section class="products-section">
+      <h2 class="section-title-center">Official Fragrance Trio</h2>
+      <div class="products-grid">
+        
+        <!-- Product 1: MY WINGMAN - 100ML -->
+        <div class="official-product-card">
+          <div>
+            <div class="product-img-wrapper">
+              <img 
+                src="assets/my_wingman.png" 
+                alt="MY WINGMAN - 100ML"
+                onerror="this.src='assets/my_wingman.svg';"
+              >
+              <div class="rating-badge">
+                <span class="star-icon">★</span> 4.8 (853)
+              </div>
+            </div>
+            <div class="product-info-body">
+              <h3 class="product-title-bold">MY WINGMAN - 100ML</h3>
+              <p class="product-notes-sub">Cardamom | Tobacco | Cedar</p>
+              <div class="price-row">
+                <span class="price-current">₹720</span>
+                <span class="price-original">₹1,000</span>
+                <span class="price-discount">28% OFF</span>
+              </div>
+              <div class="badge-pills-row">
+                <span class="badge-pill">25% Oil Concentration</span>
+                <span class="badge-pill">For Men</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-add-to-cart" onclick="addToCart('MY WINGMAN')">ADD TO CART</button>
+        </div>
+
+        <!-- Product 2: VETIVER OUD - 100ML -->
+        <div class="official-product-card">
+          <div>
+            <div class="product-img-wrapper">
+              <img 
+                src="assets/vetiver_oud.png" 
+                alt="VETIVER OUD - 100ML"
+                onerror="this.src='assets/vetiver_oud.svg';"
+              >
+              <div class="rating-badge">
+                <span class="star-icon">★</span> 4.8 (1233)
+              </div>
+            </div>
+            <div class="product-info-body">
+              <h3 class="product-title-bold">VETIVER OUD - 100ML</h3>
+              <p class="product-notes-sub">Moroccan Rose | Amber | Oud</p>
+              <div class="price-row">
+                <span class="price-current">₹760</span>
+                <span class="price-original">₹1,100</span>
+                <span class="price-discount">30% OFF</span>
+              </div>
+              <div class="badge-pills-row">
+                <span class="badge-pill">25% Oil Concentration</span>
+                <span class="badge-pill">Oud Unisex</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-add-to-cart" onclick="addToCart('VETIVER OUD')">ADD TO CART</button>
+        </div>
+
+        <!-- Product 3: COOKIE CRUSH - 100ML -->
+        <div class="official-product-card">
+          <div>
+            <div class="product-img-wrapper">
+              <img 
+                src="assets/cookie_crush.png" 
+                alt="COOKIE CRUSH - 100ML"
+                onerror="this.src='assets/cookie_crush.svg';"
+              >
+              <div class="rating-badge">
+                <span class="star-icon">★</span> 4.9 (723)
+              </div>
+            </div>
+            <div class="product-info-body">
+              <h3 class="product-title-bold">COOKIE CRUSH - 100ML</h3>
+              <p class="product-notes-sub">Berries | Lilac | Vanilla</p>
+              <div class="price-row">
+                <span class="price-current">₹660</span>
+                <span class="price-original">₹1,000</span>
+                <span class="price-discount">34% OFF</span>
+              </div>
+              <div class="badge-pills-row">
+                <span class="badge-pill">25% Oil Concentration</span>
+                <span class="badge-pill">For Women</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-add-to-cart" onclick="addToCart('COOKIE CRUSH')">ADD TO CART</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Bla Bli Blu Parfum. All rights reserved. | Tag @blabliblu.official on Instagram</p>
+  </footer>
+
+  <!-- Fallback & Image Loader Logic -->
+  <script>
+    function addToCart(productName) {
+      alert(`Added ${productName} to your cart!`);
+    }
+
+    let isAudioOn = true;
+    function toggleAudio() {
+      isAudioOn = !isAudioOn;
+      document.getElementById('btnAudioToggle').innerText = isAudioOn ? '🔊 Sound ON' : '🔇 Sound OFF';
+    }
+
+    // Image fallback sequence for local server or file mode
+    function tryLoadNextBannerSrc(img) {
+      const sources = [
+        "media__1789240412356.png",
+        "file:///C:/Users/chand/.gemini/antigravity-ide/brain/ad5d8346-c7cc-41c5-a336-2d7b3becb6f8/media__1789240412356.png"
+      ];
+      let step = parseInt(img.dataset.step || "0");
+      if (step < sources.length) {
+        img.dataset.step = step + 1;
+        img.src = sources[step];
+      } else {
+        img.style.display = "none"; // Hide broken image element so SVG animated stage displays perfectly!
+      }
+    }
+
+    function tryLoadNextComicSrc(img) {
+      const sources = [
+        "media__1789240335568.png",
+        "file:///C:/Users/chand/.gemini/antigravity-ide/brain/ad5d8346-c7cc-41c5-a336-2d7b3becb6f8/media__1789240335568.png"
+      ];
+      let step = parseInt(img.dataset.step || "0");
+      if (step < sources.length) {
+        img.dataset.step = step + 1;
+        img.src = sources[step];
+      }
+    }
+
+    function tryLoadNextProductSrc(img, name) {
+      const mapping = {
+        'my_wingman': ['media__1789240280755.png', 'file:///C:/Users/chand/.gemini/antigravity-ide/brain/ad5d8346-c7cc-41c5-a336-2d7b3becb6f8/media__1789240280755.png'],
+        'vetiver_oud': ['media__1789240296456.png', 'file:///C:/Users/chand/.gemini/antigravity-ide/brain/ad5d8346-c7cc-41c5-a336-2d7b3becb6f8/media__1789240296456.png'],
+        'cookie_crush': ['media__1789240315242.png', 'file:///C:/Users/chand/.gemini/antigravity-ide/brain/ad5d8346-c7cc-41c5-a336-2d7b3becb6f8/media__1789240315242.png']
+      };
+      const sources = mapping[name] || [];
+      let step = parseInt(img.dataset.step || "0");
+      if (step < sources.length) {
+        img.dataset.step = step + 1;
+        img.src = sources[step];
+      } else {
+        // SVG Vector Bottle Fallback
+        const isRed = name === 'vetiver_oud';
+        const color = isRed ? '#d50027' : '#ffffff';
+        const capColor = isRed ? '#800018' : '#f0f0f0';
+        const label = name.replace('_', ' ').toUpperCase();
+        
+        const wrapper = img.parentElement;
+        img.style.display = 'none';
+        
+        const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("class", "svg-bottle-art");
+        svg.setAttribute("viewBox", "0 0 140 220");
+        svg.innerHTML = `
+          <rect x="50" y="20" width="40" height="24" rx="5" fill="${capColor}" stroke="#111" stroke-width="3"/>
+          <path d="M 30,55 Q 70,45 110,55 L 110,190 Q 70,195 30,190 Z" fill="${color}" stroke="#111" stroke-width="3"/>
+          <text x="70" y="110" font-family="'Outfit', sans-serif" font-size="11" font-weight="900" text-anchor="middle" fill="${isRed ? '#fff' : '#d50027'}">BLA BLI BLU</text>
+          <text x="70" y="128" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" text-anchor="middle" fill="${isRed ? '#fff' : '#111'}">${label}</text>
+        `;
+        wrapper.appendChild(svg);
+      }
+    }
+  </script>
+</body>
+</html>

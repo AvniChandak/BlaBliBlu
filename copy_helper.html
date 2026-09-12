@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><title>Image Base64 Converter</title></head>
+<body>
+  <h1>Converting Images to Base64...</h1>
+  <canvas id="c1"></canvas>
+  <canvas id="c2"></canvas>
+  <canvas id="c3"></canvas>
+  <pre id="output" style="background:#f0f0f0; padding:10px; white-space:pre-wrap; word-break:break-all;"></pre>
+
+  <script>
+    const images = [
+      { id: 'img1', name: 'my_wingman', url: 'file:///C:/Users/chand/.gemini/antigravity-ide/brain/ad5d8346-c7cc-41c5-a336-2d7b3becb6f8/media__1789240280755.png' },
+      { id: 'img2', name: 'vetiver_oud', url: 'file:///C:/Users/chand/.gemini/antigravity-ide/brain/ad5d8346-c7cc-41c5-a336-2d7b3becb6f8/media__1789240296456.png' },
+      { id: 'img3', name: 'cookie_crush', url: 'file:///C:/Users/chand/.gemini/antigravity-ide/brain/ad5d8346-c7cc-41c5-a336-2d7b3becb6f8/media__1789240315242.png' }
+    ];
+
+    const results = {};
+    let loadedCount = 0;
+
+    images.forEach((item, index) => {
+      const img = new Image();
+      img.crossOrigin = 'Anonymous';
+      img.onload = function() {
+        const canvas = document.getElementById('c' + (index + 1));
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+        results[item.name] = canvas.toDataURL('image/png');
+        loadedCount++;
+        if (loadedCount === images.length) {
+          const jsCode = `window.PRODUCT_REAL_IMAGES = ${JSON.stringify(results, null, 2)};`;
+          document.getElementById('output').innerText = jsCode;
+          console.log("DONE_CONVERTING");
+        }
+      };
+      img.src = item.url;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,684 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;1,400;1,600&display=swap');
+
+:root {
+  --bg-dark: #121215;
+  --bg-card: #ffffff;
+  --header-bg: #18181c;
+  --primary-red: #d50027;
+  --primary-red-hover: #b0001f;
+  --accent-pink: #ff407d;
+  --accent-yellow: #ffc107;
+  --text-main: #111111;
+  --text-muted: #666666;
+  --border-color: #e0e0e0;
+  --font-pixel: 'Press Start 2P', monospace, cursive;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-poem: 'Playfair Display', Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header Bar */
+.site-header {
+  background-color: var(--header-bg);
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .brand {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-header .brand span {
+  color: var(--accent-pink);
+}
+
+.header-audio-toggle {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.header-audio-toggle:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Hero Banner Container */
+.hero-banner-wrap {
+  width: 100%;
+  background: #18000a;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+@keyframes floatParticles {
+  0% { background-position: 0 0; }
+  100% { background-position: 600px -150px; }
+}
+
+/* Animated Main Title */
+.hero-title-box {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.hero-title-text {
+  font-family: var(--font-pixel);
+  font-size: 40px;
+  color: #ffffff;
+  text-shadow: 
+    4px 4px 0px #000,
+    -2px -2px 0px #000,
+    2px -2px 0px #000,
+    -2px 2px 0px #000,
+    0 0 20px rgba(255, 64, 125, 0.8);
+  letter-spacing: 4px;
+  animation: titleGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  0% { text-shadow: 4px 4px 0px #000, 0 0 10px rgba(255, 64, 125, 0.5); }
+  100% { text-shadow: 4px 4px 0px #000, 0 0 25px rgba(255, 213, 79, 0.9); }
+}
+
+.hero-subtitle-text {
+  font-family: var(--font-pixel);
+  font-size: 20px;
+  color: #ffd54f;
+  text-shadow: 3px 3px 0px #000;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* Stage Row (Left Rider, Center Trio, Right Cliff) */
+.hero-stage-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Left Perfume Rocket Rider Animation */
+.hero-rider-animated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: rocketFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes rocketFloat {
+  0% { transform: translateY(0px) rotate(-2deg); }
+  100% { transform: translateY(-14px) rotate(2deg); }
+}
+
+.rocket-svg-box {
+  width: 220px;
+  height: 90px;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+}
+
+/* Center Perfume Trio Showcase */
+.hero-trio-box {
+  display: flex;
+  gap: 14px;
+  align-items: flex-end;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 12px 20px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.trio-bottle {
+  width: 90px;
+  background: #ffffff;
+  border: 2.5px solid #111;
+  border-radius: 10px;
+  padding: 8px 6px;
+  text-align: center;
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+}
+
+.trio-bottle:hover {
+  transform: translateY(-6px) scale(1.06);
+}
+
+.trio-bottle.red-variant {
+  background: #d50027;
+  color: #ffffff;
+}
+
+.trio-cap {
+  width: 32px;
+  height: 18px;
+  margin: -16px auto 6px;
+  border: 2.5px solid #111;
+  border-radius: 4px;
+  background: #f0f0f0;
+}
+
+.trio-bottle.red-variant .trio-cap {
+  background: #800018;
+}
+
+.trio-title {
+  font-family: var(--font-pixel);
+  font-size: 7.5px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.trio-sub {
+  font-size: 6.5px;
+  opacity: 0.85;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Right Cliffside Character */
+.hero-cliff-box {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  animation: caveGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes caveGlow {
+  0% { filter: drop-shadow(0 0 5px rgba(213, 0, 39, 0.4)); }
+  100% { filter: drop-shadow(0 0 18px rgba(255, 64, 125, 0.9)); }
+}
+
+.cliff-character-avatar {
+  font-size: 44px;
+}
+
+/* Main Content Container */
+.content-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Story Section */
+.story-grid-section {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.comic-single-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid #111;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+  background: #18000a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comic-single-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0px rgba(213, 0, 39, 0.4);
+}
+
+.comic-single-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.poem-container {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.poem-text {
+  font-family: var(--font-poem);
+  font-style: italic;
+  font-size: 20px;
+  line-height: 2.2;
+  color: #2b2b2b;
+}
+
+.poem-text p {
+  margin-bottom: 4px;
+}
+
+.poem-highlight {
+  font-weight: 600;
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  color: var(--primary-red);
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+}
+
+/* Promo Tagline Section */
+.promo-callout {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.promo-heading {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.promo-description {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #444444;
+  line-height: 1.7;
+}
+
+.insta-tag {
+  color: #d62976;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid #d62976;
+  transition: opacity 0.2s ease;
+}
+
+.insta-tag:hover {
+  opacity: 0.8;
+}
+
+/* Game & Instructions Grid */
+.game-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.scratch-container {
+  background: #ffffff;
+  border: 3px solid #d0d0d0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.scratch-bar {
+  background: #f2f2f2;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scratch-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.scratch-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green-flag {
+  background: #45bf55;
+  color: #fff;
+  font-size: 16px;
+}
+
+.red-stop {
+  background: #ff4d4d;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.scratch-badge {
+  font-weight: 800;
+  color: #fca311;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.scratch-score-badge {
+  background: #eef2f5;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 4px 14px;
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  color: #1e293b;
+}
+
+/* Instructions Column */
+.instructions-column {
+  padding-top: 10px;
+}
+
+.instructions-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.instructions-title-main {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+.instructions-title-sub {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: 1px;
+}
+
+.steps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.steps-list li {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
+}
+
+.step-num {
+  font-weight: 800;
+  color: var(--primary-red);
+  min-width: 24px;
+}
+
+/* Rewards Table */
+.rewards-section {
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+
+.rewards-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid var(--primary-red);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(213, 0, 39, 0.15);
+}
+
+.rewards-table th {
+  background-color: var(--primary-red);
+  color: #ffffff;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.rewards-table td {
+  padding: 16px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: #000000;
+  border: 1.5px solid #ffb3c1;
+  background-color: #ffffff;
+}
+
+/* Official Product Cards Grid (Matching Screenshots 1, 2, 3) */
+.products-section {
+  margin-bottom: 60px;
+}
+
+.section-title-center {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 36px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.official-product-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.official-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.product-img-wrapper {
+  position: relative;
+  width: 100%;
+  background: #f7f6f4;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.product-img-wrapper img {
+  max-width: 100%;
+  max-height: 260px;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* SVG Bottle Art Fallback */
+.svg-bottle-art {
+  width: 140px;
+  height: 220px;
+  display: block;
+}
+
+.rating-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 5;
+}
+
+.rating-badge .star-icon {
+  color: #d50027;
+  font-size: 14px;
+}
+
+.product-info-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.product-title-bold {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 900;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-notes-sub {
+  font-size: 15px;
+  color: #555555;
+  font-weight: 400;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.price-current {
+  font-size: 24px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.price-original {
+  font-size: 16px;
+  color: #888888;
+  text-decoration: line-through;
+}
+
+.price-discount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d50027;
+}
+
+.badge-pills-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.badge-pill {
+  background: #f2f2f2;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.btn-add-to-cart {
+  width: 100%;
+  background: #d50027;
+  color: #ffffff;
+  border: none;
+  padding: 14px 20px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-add-to-cart:hover {
+  background: #b0001f;
+}
+
+/* Footer */
+footer {
+  background: var(--header-bg);
+  color: #888899;
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 900px) {
+  .story-grid-section,
+  .game-section-grid,
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

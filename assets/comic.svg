@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#18000a" />
+
+  <!-- Top Row: 3 Panels -->
+  <!-- Panel 1: Cozy Bed Cuddling -->
+  <g transform="translate(10, 10)">
+    <rect width="183" height="180" fill="#2b0012" rx="4" stroke="#111" stroke-width="2"/>
+    <circle cx="60" cy="90" r="30" fill="#ffccaa"/>
+    <path d="M 40,80 Q 60,60 80,80 Z" fill="#a52a2a"/>
+    <circle cx="110" cy="90" r="30" fill="#ffe0bd"/>
+    <path d="M 90,80 Q 110,60 130,80 Z" fill="#f5e0b3"/>
+    <path d="M 40,120 Q 90,100 140,120 L 150,170 L 30,170 Z" fill="#7a0026"/>
+    <text x="91" y="160" font-family="'Press Start 2P', monospace" font-size="8" fill="#ffd54f" text-anchor="middle">❤️ LOVE ❤️</text>
+  </g>
+
+  <!-- Panel 2: Giant Red Eye Tentacles -->
+  <g transform="translate(203, 10)">
+    <rect width="184" height="180" fill="#140008" rx="4" stroke="#111" stroke-width="2"/>
+    <ellipse cx="92" cy="70" rx="35" ry="20" fill="#d50027"/>
+    <ellipse cx="92" cy="70" rx="8" ry="16" fill="#000"/>
+    <!-- Tentacles -->
+    <path d="M 10,170 Q 50,110 30,50 Q 80,90 92,130" stroke="#b0001f" stroke-width="12" fill="none"/>
+    <path d="M 170,170 Q 130,110 150,50 Q 100,90 92,130" stroke="#b0001f" stroke-width="12" fill="none"/>
+  </g>
+
+  <!-- Panel 3: Trapped Shouting HELP -->
+  <g transform="translate(397, 10)">
+    <rect width="193" height="180" fill="#1c000c" rx="4" stroke="#111" stroke-width="2"/>
+    <circle cx="95" cy="80" r="24" fill="#ffe0bd"/>
+    <path d="M 20,180 Q 70,100 95,95 Q 120,100 170,180" stroke="#d50027" stroke-width="16" fill="none"/>
+    <!-- Speech Bubble HELP -->
+    <rect x="110" y="110" width="65" height="28" rx="6" fill="#fff" stroke="#111" stroke-width="2"/>
+    <text x="142" y="128" font-family="'Impact', sans-serif" font-size="13" font-weight="900" fill="#111" text-anchor="middle">HELP...!</text>
+  </g>
+
+  <!-- Bottom Row: 2 Panels -->
+  <!-- Panel 4: Flying Perfume Rocket Sunset -->
+  <g transform="translate(10, 200)">
+    <rect width="280" height="190" fill="#59001c" rx="4" stroke="#111" stroke-width="2"/>
+    <!-- Pink Moon -->
+    <circle cx="60" cy="50" r="30" fill="#ff80a0" opacity="0.6"/>
+    <!-- Perfume Rocket Surf -->
+    <rect x="50" y="120" width="160" height="30" rx="8" fill="#fce4ec" stroke="#111" stroke-width="2"/>
+    <rect x="210" y="123" width="16" height="24" rx="3" fill="#d50027" stroke="#111" stroke-width="2"/>
+    <text x="70" y="140" font-family="'Press Start 2P', monospace" font-size="7" fill="#8b002b">BLA BLI BLU</text>
+    <circle cx="120" cy="100" r="14" fill="#ffccaa"/>
+    <path d="M 106,100 Q 120,85 134,100 Z" fill="#a52a2a"/>
+  </g>
+
+  <!-- Panel 5: Flying into Tentacle Castle -->
+  <g transform="translate(300, 200)">
+    <rect width="290" height="190" fill="#29000d" rx="4" stroke="#111" stroke-width="2"/>
+    <!-- Crimson Moon -->
+    <circle cx="230" cy="45" r="35" fill="#d50027" opacity="0.8"/>
+    <!-- Dark Castle Silhouette -->
+    <path d="M 180,180 L 180,100 L 200,70 L 220,100 L 240,60 L 260,100 L 280,180 Z" fill="#0c0005"/>
+    <!-- Rocket heading to castle -->
+    <rect x="40" y="130" width="90" height="18" rx="5" fill="#fce4ec" stroke="#111" stroke-width="1.5"/>
+    <circle cx="75" cy="118" r="8" fill="#ffccaa"/>
+  </g>
+</svg>
