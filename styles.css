@@ -289,6 +289,22 @@ body {
 }
 
 /* Interactive Game Experience */
+.game-frame {
+  width: 100%;
+  max-width: 485px;
+  margin: 0 auto;
+  aspect-ratio: 485 / 402;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.game-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 .game-experience {
   margin: 0 0 64px;
 }
